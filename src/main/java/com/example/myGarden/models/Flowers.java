@@ -2,6 +2,8 @@ package com.example.myGarden.models;
 
 import jakarta.persistence.*;
 
+import java.sql.Blob;
+
 @Entity
 @Table
 public class Flowers {
@@ -10,7 +12,7 @@ public class Flowers {
     private Long id;
     private String name;
     private String description;
-    private String image;
+    private Blob image;
     @ManyToOne()
     @JoinColumn(name = "type_id", insertable = false, updatable = false)
     private Types type;
@@ -25,7 +27,7 @@ public class Flowers {
     public Flowers() {
     }
 
-    public Flowers(String name, String description, String image, Types type, Long type_id, Users user, Long user_id) {
+    public Flowers(String name, String description, Blob image, Types type, Long type_id, Users user, Long user_id) {
         this.name = name;
         this.description = description;
         this.image = image;
@@ -35,7 +37,7 @@ public class Flowers {
         this.user_id = user_id;
     }
 
-    public Flowers(Long id, String name, String description, String image, Types type, Long type_id, Users user, Long user_id) {
+    public Flowers(Long id, String name, String description, Blob image, Types type, Long type_id, Users user, Long user_id) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -70,11 +72,11 @@ public class Flowers {
         this.description = description;
     }
 
-    public String getImage() {
+    public Blob getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Blob image) {
         this.image = image;
     }
 

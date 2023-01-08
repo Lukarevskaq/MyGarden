@@ -20,8 +20,8 @@ public class UsersService {
         return user.getId();
     }
 
-    public UserData getUser(String email, String password) {
-        return usersRepository.findOneByEmailAndPassword(email, password);
+    public UserData getUser(String name, String password) {
+        return usersRepository.findOneByNameAndPassword(name, password);
     }
 
 }

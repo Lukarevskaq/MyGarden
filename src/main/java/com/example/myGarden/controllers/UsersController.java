@@ -22,7 +22,7 @@ public class UsersController {
     }
 
     @GetMapping("login")
-    public UserData getUser(@RequestParam String email, String password) {
-        return usersService.getUser(email, password);
+    public UserData getUser(@RequestParam String name, String password) {
+        return usersService.getUser(name, password);
     }
 }

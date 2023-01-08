@@ -1,9 +1,7 @@
 package com.example.myGarden.controllers;
 
 import com.example.myGarden.models.Flowers;
-import com.example.myGarden.models.Users;
 import com.example.myGarden.services.FlowersService;
-import com.example.myGarden.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

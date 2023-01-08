@@ -15,10 +15,5 @@ public interface FlowersRepository extends JpaRepository<Flowers, Long> {
 
   //  List<Flowers> findByTitleContainingIgnoreCaseAndUserId(String title, Long user_id);
 
-    @Transactional
-    @Modifying
-    @Query("update Task t set t.status_id = :status_id where t.id = :id")
-    int updateStatusIdByTaskId(@Param("status_id") Long status_id, @Param("id") Long id);
-
     List<Flowers> findAllByUserId(Long userId);
 }

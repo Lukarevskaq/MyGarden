@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="myGarden.js"></script>
+</head>
+
+<body>
+<div>
+    <label for="flower-name">Name</label>
+    <input type="text" id="flower-name" placeholder="add name..."/>
+
+    <label for="flower-description">Description</label>
+    <input type="text" id="flower-description" placeholder="add description..."/>
+
+    <label for="imgInp">Select a file:</label>
+    <input accept="image/*" type='file' id="imgInp" onchange="getFileBlobType(event)">
+    <img id="flower-img" src="#" alt="flower image" />
+
+    <button onclick="addFlower()">Add Flower</button>
+
+    <div id="flowers-wrapper" class="flowers-wrapper">
+
+    </div>
+</div>
+</body>
+
+</html>
