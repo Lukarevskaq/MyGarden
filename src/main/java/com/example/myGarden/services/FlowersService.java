@@ -17,7 +17,10 @@ public class FlowersService {
         this.flowersRepository = flowersRepository;
     }
 
-    public Long addFlower(Flowers flower){
+    public Long addFlower(String name, String description) {
+        Flowers flower = new Flowers();
+        flower.setName(name);
+        flower.setDescription(description);
         flowersRepository.save(flower);
         return flower.getId();
     }
@@ -39,4 +42,11 @@ public class FlowersService {
     public void deleteFlower(Long flowerId) {
         flowersRepository.deleteById(flowerId);
     }
+
+    public Long addFlower(Flowers flower) {
+
+
+        return null;
+    }
+
 }

@@ -10,11 +10,25 @@ const [file] = imgInp.files
 function addFlower(){
     const name = document.getElementById("flower-name").value;
     const description = document.getElementById("flower-description").value;
-    const image = document.getElementById("flower-img").value;
+    //const image = document.getElementById("flower-img").value;
 console.log(image);
     const newFlower ={
     name:name,
     description:description,
-    image:image
+    //image:image
     }
+
+    $.ajax({
+    url :"/flower/add",
+    data: {
+    newFlower
+    },
+    type : "POST",
+    dataType : "json",
+    success : function () {
+    alert("You have successfully registered!")
+    getUser ();
+    window.location.reload()
+    }
+    })
 }

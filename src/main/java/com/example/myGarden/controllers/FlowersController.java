@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/flower")
-public class FlowersController {
+public class FlowersController  {
 
     private final FlowersService flowersService;
 
@@ -18,11 +18,11 @@ public class FlowersController {
         this.flowersService = flowersService;
     }
 
-    @PostMapping("add")
+    @PostMapping("/add")
     public Long addFlower(@RequestBody Flowers flower) {
         return flowersService.addFlower(flower);
     }
-    @GetMapping("getFlowers")
+    @GetMapping("/getFlowers")
     public List<Flowers> getFlowersByUserId(@RequestParam Long userId) {
         return flowersService.getFlowersByUserId(userId);
     }
